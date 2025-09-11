@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size : 16px !important;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+/* common */
+.row{
+    display : flex;
+}
+.col{
+    /* float: left; */
+    padding : 10px;
+}
+.col-full{
+    width: 100%;
+}
+.col-two{
+    width: 50%;
+}
+.col-three{
+    width: 33.33%;
+}
+
+/*
+1.tu ngoai vao trong 
+2.tu tren xuong duoi
+*/
+/*
+1.Vi tri 
+2.Kich thuoc
+3.Mau sac
+4.Font chu
+5.Border
+6.Margin
+7.Padding
+8.Chuc nang
+9.Hieu ung
+10.Responsive
+*/
+#main{
+ padding-bottom: 2000px; /* tạo khoảng trống dưới cùng */
+}
+
+#header{
+        height: 46px;
+        color: white;
+        background-color:black;
+        top : 0;
+        left: 0; 
+        right: 0;
+        position : fixed; 
+        display : flex;
+        align-items : center;
+        padding : 0 20px;
+        justify-content: space-between;
+        z-index: 1000;
+}
+.logo img {
+    height: 46px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+
+#nav {
+display : inline-block;
+}
+
+#nav li {
+  display : inline-block;
+  position : relative;
+}
+#nav .subnav li {
+    display : block;
+    width :  46px;
+    border-bottom : 1px solid gray;
+}
+
+
+#nav li:hover .subnav {
+    /* khi hover vao li thi hien subnav */
+    display : block; 
+}
+    
+    
+#nav .subnav {
+    /* khi khong hover thi an subnav */
+    display : none; 
+    background-color :black;
+    top : 46px;
+    position : absolute;
+    box-shadow: 0 0 10px rgba(250, 247, 247, 0.5);
+}
+
+
+#nav li a {
+    color : white;
+    text-decoration: none;
+    line-height: 46px;
+    padding : 0 24px;
+    display: block;
+
+}
+
+#header .search-btn:hover,
+#nav .subnav li:hover a,
+ #nav > li:hover > a{
+    color : black;
+    background-color: orange;
+}
+#header .menu-btn,
+#header .search-btn{
+    float: right;
+    line-height: 46px;
+    padding: 0 20px;
+  
+}
+#header .menu-btn:hover,
+#header .search-btn:hover{
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+    color: whitesmoke;
+}
+#slider{
+    position: relative;
+     /* tao khoang cach giua header va slider */
+    margin-top: 46px;  
+    padding-top: 50%;
+    background: url('https://th.bing.com/th/id/R.b4aa0bf6aaafebd7b3775a020deafca0?rik=oomBVEiEwP0cdQ&riu=http%3a%2f%2fcontents.spin.ph%2fimage%2fresize%2fimage%2f2020%2f04%2f28%2fefren-bata-reyes-4-ascano-1588034153.webp&ehk=uR6dV6xUyk9pGo%2f5K4%2bHlY4GdHDARCxntw1FiCNiqZM%3d&risl=&pid=ImgRaw&r=0')    no-repeat center /cover;
+}
+.text-content{
+    position : absolute;
+    color : white;
+    top : 30%;
+    left : 60%;
+    font-size : 20px;
+    background-origin: padding-box;
+    padding : 20px;
+    border : 2px solid white;
+    border-radius: 10px;
+}
+
+#content{
+    /* tao khoang cach giua header va content */
+    margin-top: 46px;  
+
+height: 1000px;;
+}
+.content-section{
+    margin-top: 80px;
+  scroll-margin-top: 80px; /* de khi click vao link o header thi no hien dung vi tri can thiet */
+}
+
+    
+#content .buy-ticket-btn {
+    /* can giua cho 1 block */
+    display : block;
+    margin : 0 auto;
+     width: fit-content;
+     /* end */
+    text-decoration : none ;
+    background-color: orange;
+    padding : 10px 20px;
+    color : black; 
+}
+#content .buy-ticket-btn:hover {
+    background-color: red;
+    color : white;
+}
+#content .content-section{
+    padding : 25px 10%;
+    
+}
+
+#content .section-heading{
+ font-size : 30px;
+ text-align: center;
+ padding : 10px 0;
+ word-spacing: 6px;
+ letter-spacing: 5px;
+}
+#content .section-sub-heading{
+    font-size : 20px;
+    text-align: center;
+    padding : 10px 0 20px 0;
+    color : gray;
+   }
+#content .content-section{
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 18px;
+}
+#content .add-list{
+    position : relative;
+    margin-top: 30px;
+    text-align: justify;
+}
+#content .add-item{
+    padding : 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin : 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+/* đẩy ảnh xuong dưới , sử dụng mảrgin-top:auto và 
+display : flex, flex-direction: column cho lop cha */
+#content .add-billard-img{
+    margin-top : auto;
+}
+#content .add-address{
+    padding-top : 10px;
+    margin-top : auto;
+}
+
+#content .add-phone {
+    font-size : 20px;
+    color : blue;
+    padding-top : 10px;
+    text-align: center;
+    margin-top : auto;
+}
+#content .add-billard-img img {
+    width: 100%;
+    height: auto;
+    padding-top : 20px;
+    margin-top: auto;
+    
+}
+.add-billard-img:hover {
+    opacity: 0.8;
+}
+
+#footer{
+  
+    
+}
+
+.contact-infor{
+    font-size: 18px;
+    line-height: 2;
+}
+.contact-form{
+    font-size: 15px;
+}
+.form-control{
+    padding : 10px ;
+    font-size : 18px;
+    width: 100%;
+}
+.form-submit{
+    display : block;
+    background-color: black;
+    color : white;
+    padding : 10px 20px;
+    float : right;
+    margin-right : 10px;
+}
+.form-submit:hover{
+    background-color: orange;
+    cursor : pointer;
+    color : black;
+}
+
+.model.open {
+    display : flex; /* khi them class open vao thi hien model */
+}
+.model {
+    position : fixed;
+    top : 0;    
+    left : 0;
+    right : 0;
+    bottom : 0;
+    background-color: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    z-index: 10000; 
+    /* display: flex; */
+    display : none; /* an model mac dinh */  
+}
+.model-container {
+    min-height: 300px;
+    width: 900px;
+    background-color: white;
+    max-width:calc(100% - 46px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position : relative;
+    animation : fadeIn 0.5s ease;
+}
+.model-close {
+    position : absolute;
+   padding : 12px;
+   right: 0;
+}
+.model-close:hover{
+    background-color: red;
+    color : white;
+    cursor : pointer;
+}
+
+header.model-header { 
+    height : 100px;
+    font-size : 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color : white;
+    background-color: rgb(0, 153, 255);
+}
+.model-body{
+    display : flex;
+    flex-direction: column;
+    padding : 20px 30px;
+}
+.model-label{
+    font-size : 20px;
+    padding : 5px 0;
+}
+.model-input{
+    font-size : 18px;
+    padding : 10px;
+    margin-bottom: 24px;
+}
+.model-input:focus{
+    outline : none;
+    border : 2px solid rgb(0, 153, 255);
+}
+#buy-ticket{
+    width : 150px;
+    padding : 10px 0;
+    background-color:rgb(0, 153, 255) ;
+    color : white;
+    font-size : 20px;
+    text-transform: uppercase;
+    display : block;
+    margin : 0 auto;
+}
+#buy-ticket:hover{
+    background-color: rgb(0, 102, 204);
+    cursor: pointer;
+}
+.model-footer{
+    float : right;
+    padding : 10px;
+
+}
+.model-footer a{
+    color : rgb(0, 153, 255);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

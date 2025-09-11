@@ -1,0 +1,60 @@
+/* PC */
+@media(min-width : 1024px){
+    .menu-btn{
+        display : none;}
+}
+/* Table */
+@media(min-width : 768px) and (max-width : 1023px){
+    .menu-btn{
+        display : none;}
+        
+   .text-content{
+    display : none;
+}
+}
+/* Mobile */
+@media(max-width : 767px){
+    #header{       
+        justify-content: left;
+        display: flex;
+        width : 100%;
+        overflow : hidden ;
+    }
+    #header #nav{
+     /* display : none; */
+     display : block;
+   margin-left: -20px;
+    height : 100%;
+ }
+   #nav > li{
+    display: flex;
+    
+    position: relative;
+}
+  #nav > li:first-child{
+    display : inline-block;
+
+  }
+   #header .menu-btn{
+   top: 0;
+   right : 0;
+   position : absolute;
+}
+    .subnav {
+        display : block;
+       
+    }
+
+
+
+
+ #header .search-btn {
+   display : none;
+}
+        .logo img {
+   display : none;
+}
+  .text-content{
+    display : none;
+}
+}
