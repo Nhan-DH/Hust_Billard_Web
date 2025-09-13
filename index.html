@@ -80,7 +80,7 @@
                 <h2 class="section-heading">PLACE NEAR HUST</h2>
                 <p class="section-sub-heading">We Love Billards</p>
                 <div class="row add-list">
-                    <div class="col col-three add-item">
+                    <div class="member-item col col-three add-item">
                         <h3 class="add-name">Bi A Phú Kỳ - Passion Billiards club</h3>
                         <p class="add-address">Số 10 P. Tạ Quang Bửu, Bách Khoa, Hai Bà Trưng, Hà Nội, Vietnam</p>
                         <p class="add-phone">0889676869</p>
@@ -88,7 +88,7 @@
                             <img src="/assets/img/Address_billard/Screenshot 2025-08-28 123121.png" alt="">
                         </div>
                     </div>
-                    <div class="col col-three add-item">
+                    <div class="member-item col col-three add-item">
                         <h3 class="add-name">Bi A B-Rex 67 Lê Thanh Nghị</h3>
                         <p class="add-address">67 P. Lê Thanh Nghị, Đồng Tâm, Hai Bà Trưng, Hà Nội, Vietnam</p>
                         <p class="add-phone">0368021302</p>
@@ -96,7 +96,7 @@
                             <img src="https://lh3.googleusercontent.com/p/AF1QipOqfYMvVBY0XgsizGCM5g-pIdwtm0c1CIn8kfXx=w408-h306-k-no" alt="">
                         </div>
                     </div>
-                    <div class="col col-three add-item">
+                    <div class="member-item col col-three add-item">
                         <h3 class="add-name">Bi-A BATUNA Club 30 Bàn bi-a 72 Trần Đại Nghĩa</h3>
                         <p class="add-address">72 P. Trần Đại Nghĩa, Đồng Tâm, Hai Bà Trưng, Hà Nội 100000, Vietnam</p>
                         <p class="add-phone">0934440000</p>
@@ -122,13 +122,13 @@
                         ABC
                         </p>
                     </div>
-                    <div class="col col-two contact-form">
+                    <div class="col col-two s-col-full contact-form">
                         <form action="">
-                            <div class="row">
-                                <div class="col col-two ">
+                            <div class="row ">
+                                <div class=" col col-two s-col-full ">
                                     <input type="text" placeholder="Name" required class="form-control">
                                 </div>
-                                <div class="col col-two form-one-row ">
+                                <div class=" col col-two s-col-full form-one-row ">
                                     <input type="email" placeholder="Email" required class="form-control">
                                 </div>
                             </div>
@@ -219,10 +219,18 @@
     // console.log(menuItems);
     for(var i = 0; i < menuItems.length ; i++){
         var menuItem = menuItems[i];
-        menuItem.onclick = function(){
+        menuItem.onclick = function(event){
             // console.log(this);
-            header.style.height = null;
+            var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList('subnav');
+            if(isParentMenu){
+                event.preventDefault();
+                 
+                }else{
+                    header.style.height = null;
+                }
+           
         }
     }
+
 </script>
 </html>

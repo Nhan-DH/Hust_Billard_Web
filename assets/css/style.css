@@ -67,9 +67,7 @@ html{
 }
 
 
-#nav {
-display : inline-block;
-}
+
 
 #nav li {
   display : inline-block;
@@ -77,8 +75,9 @@ display : inline-block;
 }
 #nav .subnav li {
     display : block;
-    width :  46px;
+    width :  105px;
     border-bottom : 1px solid gray;
+
 }
 
 
@@ -90,11 +89,12 @@ display : inline-block;
     
 #nav .subnav {
     /* khi khong hover thi an subnav */
-    display : none; 
+    display : none;     
     background-color :black;
     top : 46px;
     position : absolute;
     box-shadow: 0 0 10px rgba(250, 247, 247, 0.5);
+    
 }
 
 
